@@ -23,7 +23,7 @@ export default function HomePage() {
         secondaryCtaHref="/blog"
       />
 
-      <section className="container py-16">
+      <section className="container mx-auto py-16">
         <h2 className="mb-12 text-center text-3xl font-bold">Key Features</h2>
         <CardGrid>
           <Card

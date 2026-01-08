@@ -25,7 +25,7 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
       <BreadcrumbSchema items={schemaItems} />
       <nav
         aria-label="Breadcrumb"
-        className={cn('flex items-center space-x-2 text-sm', className)}
+        className={cn('flex items-center space-x-2 text-sm px-10', className)}
       >
         <ol className="flex items-center space-x-2">
           {items.map((item, index) => {

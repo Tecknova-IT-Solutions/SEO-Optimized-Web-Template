@@ -83,7 +83,7 @@ export function CardGrid({ children, className }: CardGridProps) {
   return (
     <div
       className={cn(
-        'grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3',
+        'container mx-auto grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 px-10',
         className
       )}
     >

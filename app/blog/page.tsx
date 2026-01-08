@@ -52,7 +52,7 @@ export default function BlogPage() {
         ]}
         className="container py-4"
       />
-      <div className="container py-16">
+      <div className="container mx-auto py-16 px-10">
         <div className="mb-12 space-y-4">
           <h1 className="text-4xl font-bold tracking-tight">Blog</h1>
           <p className="text-lg text-muted-foreground">
