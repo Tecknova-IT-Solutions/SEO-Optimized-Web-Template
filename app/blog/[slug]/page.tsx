@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { ArticleSchema } from '@/components/seo/JsonLd';
-import { generateMetadata } from '@/components/seo/MetaTags';
+import { createMetadata } from '@/components/seo/MetaTags';
 import { formatDate } from '@/lib/utils';
 import { getBaseUrl } from '@/lib/utils';
 import type { Metadata } from 'next';
@@ -87,7 +87,7 @@ export async function generateMetadata({
   const baseUrl = getBaseUrl();
   const url = `${baseUrl}/blog/${slug}`;
 
-  return generateMetadata({
+  return createMetadata({
     title: post.title,
     description: post.description,
     canonical: url,
@@ -135,9 +135,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <article className="container py-16">
         <div className="mx-auto max-w-3xl space-y-8">
           <header className="space-y-4">
-            <h1 className="text-4xl font-bold tracking-tight">
-              {post.title}
-            </h1>
+            <h1 className="text-4xl font-bold tracking-tight">{post.title}</h1>
             <div className="flex items-center space-x-4 text-sm text-muted-foreground">
               <time dateTime={post.datePublished}>
                 {formatDate(post.datePublished)}
@@ -161,4 +159,3 @@ export function generateStaticParams() {
     slug,
   }));
 }
-

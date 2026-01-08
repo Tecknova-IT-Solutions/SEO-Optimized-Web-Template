@@ -5,6 +5,7 @@ A production-ready, SEO-friendly web template built with Next.js 14+ (App Router
 ## 🚀 Features
 
 ### Core Features
+
 - **Next.js 14+** with App Router for optimal performance
 - **TypeScript** with strict mode for type safety
 - **Tailwind CSS** with custom configuration
@@ -12,6 +13,7 @@ A production-ready, SEO-friendly web template built with Next.js 14+ (App Router
 - **Server-Side Rendering** and Static Site Generation for SEO
 
 ### SEO Features
+
 - ✅ Next.js Metadata API for dynamic meta tags
 - ✅ Automatic sitemap generation with `next-sitemap`
 - ✅ Structured data (JSON-LD) for Schema.org markup
@@ -21,6 +23,7 @@ A production-ready, SEO-friendly web template built with Next.js 14+ (App Router
 - ✅ Breadcrumb navigation with schema markup
 
 ### Performance Optimizations
+
 - ✅ Image optimization with Next.js Image component
 - ✅ Font optimization with `next/font`
 - ✅ Code splitting and lazy loading
@@ -29,6 +32,7 @@ A production-ready, SEO-friendly web template built with Next.js 14+ (App Router
 - ✅ Optimized package imports
 
 ### Accessibility
+
 - ✅ Semantic HTML structure
 - ✅ ARIA labels where necessary
 - ✅ Keyboard navigation support
@@ -37,6 +41,7 @@ A production-ready, SEO-friendly web template built with Next.js 14+ (App Router
 - ✅ Screen reader friendly
 
 ### Developer Experience
+
 - ✅ ESLint configuration
 - ✅ Prettier configuration
 - ✅ TypeScript strict mode
@@ -85,7 +90,7 @@ A production-ready, SEO-friendly web template built with Next.js 14+ (App Router
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm, yarn, or pnpm
 
 ### Setup Steps
@@ -93,28 +98,32 @@ A production-ready, SEO-friendly web template built with Next.js 14+ (App Router
 1. **Clone or download this template**
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Install additional packages** (if not already installed)
+
    ```bash
    npm install @supabase/supabase-js @supabase/ssr
    npm install -D next-sitemap
    ```
 
 4. **Set up environment variables**
-   
+
    Copy `.env.example` to `.env.local` and fill in your values:
+
    ```bash
    cp .env.example .env.local
    ```
-   
+
    Required variables:
+
    ```env
    SITE_URL=https://yourdomain.com
    SITE_NAME=Your Site Name
-   
+
    # Optional: Supabase Configuration
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
@@ -122,6 +131,7 @@ A production-ready, SEO-friendly web template built with Next.js 14+ (App Router
    ```
 
 5. **Run the development server**
+
    ```bash
    npm run dev
    ```
@@ -148,7 +158,7 @@ The template uses Tailwind CSS with a custom theme. You can customize colors, fo
 1. **Update site metadata** in `app/layout.tsx`
 2. **Configure sitemap** in `next-sitemap.config.js`
 3. **Add structured data** using components in `components/seo/JsonLd.tsx`
-4. **Set up meta tags** using `generateMetadata` from `components/seo/MetaTags.tsx`
+4. **Set up meta tags** using `createMetadata` from `components/seo/MetaTags.tsx`
 
 ### Supabase Setup
 
@@ -198,6 +208,7 @@ The template uses Tailwind CSS with a custom theme. You can customize colors, fo
 4. Deploy!
 
 Vercel will automatically:
+
 - Build your Next.js application
 - Generate the sitemap
 - Optimize images
@@ -206,12 +217,14 @@ Vercel will automatically:
 ### Other Platforms
 
 This template works with any platform that supports Next.js:
+
 - Netlify
 - AWS Amplify
 - Railway
 - DigitalOcean App Platform
 
 Make sure to:
+
 1. Set environment variables
 2. Run `npm run build` during deployment
 3. Configure your domain in the platform settings
@@ -221,10 +234,11 @@ Make sure to:
 ### Using SEO Components
 
 #### MetaTags
-```typescript
-import { generateMetadata } from '@/components/seo/MetaTags';
 
-export const metadata = generateMetadata({
+```typescript
+import { createMetadata } from '@/components/seo/MetaTags';
+
+export const metadata = createMetadata({
   title: 'Page Title',
   description: 'Page description',
   keywords: 'keyword1, keyword2',
@@ -233,6 +247,7 @@ export const metadata = generateMetadata({
 ```
 
 #### JSON-LD Structured Data
+
 ```typescript
 import { OrganizationSchema, ArticleSchema } from '@/components/seo/JsonLd';
 
@@ -247,6 +262,7 @@ import { OrganizationSchema, ArticleSchema } from '@/components/seo/JsonLd';
 ### Using Supabase
 
 #### Client-side
+
 ```typescript
 import { createClient } from '@/lib/supabase/client';
 
@@ -255,6 +271,7 @@ const { data } = await supabase.from('table').select('*');
 ```
 
 #### Server-side
+
 ```typescript
 import { createClient } from '@/lib/supabase/server';
 
@@ -265,16 +282,19 @@ const { data } = await supabase.from('table').select('*');
 ## 🐛 Troubleshooting
 
 ### Sitemap not generating
+
 - Make sure `SITE_URL` is set in your environment variables
 - Check that `next-sitemap.config.js` is configured correctly
 - Run `npm run postbuild` manually after build
 
 ### Supabase connection issues
+
 - Verify your environment variables are set correctly
 - Check that your Supabase project is active
 - Ensure CORS is configured in Supabase dashboard
 
 ### Build errors
+
 - Clear `.next` folder and rebuild: `rm -rf .next && npm run build`
 - Check TypeScript errors: `npm run lint`
 - Verify all dependencies are installed: `npm install`
@@ -294,4 +314,3 @@ For issues and questions, please open an issue on GitHub.
 ---
 
 Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
-

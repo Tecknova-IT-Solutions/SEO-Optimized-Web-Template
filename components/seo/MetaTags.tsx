@@ -1,12 +1,14 @@
 import { Metadata } from 'next';
 import { getBaseUrl } from '@/lib/utils';
 
+type OpenGraphType = 'website' | 'article' | 'book' | 'profile';
+
 interface MetaTagsProps {
   title: string;
   description: string;
   canonical?: string;
   ogImage?: string;
-  ogType?: string;
+  ogType?: OpenGraphType;
   noindex?: boolean;
   nofollow?: boolean;
   keywords?: string;
@@ -15,7 +17,7 @@ interface MetaTagsProps {
   modifiedTime?: string;
 }
 
-export function generateMetadata({
+export function createMetadata({
   title,
   description,
   canonical,
@@ -77,4 +79,3 @@ export function generateMetadata({
     },
   };
 }
-

@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { generateMetadata } from '@/components/seo/MetaTags';
+import { createMetadata } from '@/components/seo/MetaTags';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = generateMetadata({
+export const metadata: Metadata = createMetadata({
   title: '404 - Page Not Found',
   description: 'The page you are looking for could not be found.',
   noindex: true,
@@ -22,7 +22,7 @@ export default function NotFound() {
         </div>
         <Link
           href="/"
-          className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          className="hover:bg-primary/90 inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           Go Back Home
         </Link>
@@ -30,4 +30,3 @@ export default function NotFound() {
     </div>
   );
 }
-

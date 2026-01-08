@@ -1,9 +1,9 @@
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { Card, CardGrid } from '@/components/common/Card';
-import { generateMetadata } from '@/components/seo/MetaTags';
+import { createMetadata } from '@/components/seo/MetaTags';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = generateMetadata({
+export const metadata: Metadata = createMetadata({
   title: 'Blog',
   description:
     'Read our latest articles and insights on web development, SEO, and modern web technologies.',
@@ -75,4 +75,3 @@ export default function BlogPage() {
     </>
   );
 }
-

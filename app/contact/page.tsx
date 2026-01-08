@@ -1,8 +1,8 @@
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
-import { generateMetadata } from '@/components/seo/MetaTags';
+import { createMetadata } from '@/components/seo/MetaTags';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = generateMetadata({
+export const metadata: Metadata = createMetadata({
   title: 'Contact Us',
   description:
     'Get in touch with us. We would love to hear from you and answer any questions you may have.',
@@ -81,7 +81,7 @@ export default function ContactPage() {
             </div>
             <button
               type="submit"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="hover:bg-primary/90 inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               Send Message
             </button>
@@ -91,4 +91,3 @@ export default function ContactPage() {
     </>
   );
 }
-

@@ -1,10 +1,10 @@
 import { Hero } from '@/components/common/Hero';
 import { CTA } from '@/components/common/CTA';
 import { Card, CardGrid } from '@/components/common/Card';
-import { generateMetadata } from '@/components/seo/MetaTags';
+import { createMetadata } from '@/components/seo/MetaTags';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = generateMetadata({
+export const metadata: Metadata = createMetadata({
   title: 'Home',
   description:
     'Welcome to our SEO-optimized web template. Built with Next.js 14+, TypeScript, and modern best practices for performance and search engine visibility.',
@@ -24,9 +24,7 @@ export default function HomePage() {
       />
 
       <section className="container py-16">
-        <h2 className="mb-12 text-center text-3xl font-bold">
-          Key Features
-        </h2>
+        <h2 className="mb-12 text-center text-3xl font-bold">Key Features</h2>
         <CardGrid>
           <Card
             title="SEO Optimized"
@@ -64,4 +62,3 @@ export default function HomePage() {
     </>
   );
 }
-

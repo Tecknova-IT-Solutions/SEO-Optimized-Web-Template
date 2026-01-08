@@ -1,8 +1,8 @@
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
-import { generateMetadata } from '@/components/seo/MetaTags';
+import { createMetadata } from '@/components/seo/MetaTags';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = generateMetadata({
+export const metadata: Metadata = createMetadata({
   title: 'About Us',
   description:
     'Learn more about our SEO-optimized web template, its features, and how it can help you build fast, accessible, and search-engine-friendly websites.',
@@ -68,4 +68,3 @@ export default function AboutPage() {
     </>
   );
 }
-
