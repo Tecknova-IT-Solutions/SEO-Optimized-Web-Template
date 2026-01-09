@@ -2,6 +2,9 @@ import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { createMetadata } from '@/components/seo/MetaTags';
 import type { Metadata } from 'next';
 
+// Force dynamic rendering to ensure proper SSR in production
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = createMetadata({
   title: 'Contact Us',
   description:

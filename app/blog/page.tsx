@@ -3,6 +3,9 @@ import { Card, CardGrid } from '@/components/common/Card';
 import { createMetadata } from '@/components/seo/MetaTags';
 import type { Metadata } from 'next';
 
+// Force dynamic rendering to ensure proper SSR in production
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = createMetadata({
   title: 'Blog',
   description:
@@ -52,7 +55,7 @@ export default function BlogPage() {
         ]}
         className="container py-4"
       />
-      <div className="container mx-auto py-16 px-10">
+      <div className="container mx-auto px-10 py-16">
         <div className="mb-12 space-y-4">
           <h1 className="text-4xl font-bold tracking-tight">Blog</h1>
           <p className="text-lg text-muted-foreground">

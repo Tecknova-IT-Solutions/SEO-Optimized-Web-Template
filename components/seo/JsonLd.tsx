@@ -1,4 +1,3 @@
-import { getBaseUrl } from '@/lib/utils';
 
 interface JsonLdProps {
   type?: string;

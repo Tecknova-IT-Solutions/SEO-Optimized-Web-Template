@@ -2,6 +2,9 @@ import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { createMetadata } from '@/components/seo/MetaTags';
 import type { Metadata } from 'next';
 
+// Force dynamic rendering to ensure proper SSR in production
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = createMetadata({
   title: 'Terms of Service',
   description:
@@ -74,8 +77,8 @@ export default function TermsPage() {
                   materials
                 </li>
                 <li>
-                  Transfer the materials to another person or "mirror" the
-                  materials on any other server
+                  Transfer the materials to another person or &quot;mirror&quot;
+                  the materials on any other server
                 </li>
               </ul>
               <p className="text-muted-foreground">
@@ -124,7 +127,7 @@ export default function TermsPage() {
                 </li>
                 <li>
                   To engage in any other conduct that restricts or inhibits
-                  anyone's use or enjoyment of the website
+                  anyone&apos;s use or enjoyment of the website
                 </li>
               </ul>
             </section>
@@ -209,12 +212,13 @@ export default function TermsPage() {
             <section className="space-y-4">
               <h2 className="text-2xl font-semibold">10. Disclaimer</h2>
               <p className="text-muted-foreground">
-                The materials on our website are provided on an 'as is' basis.
-                We make no warranties, expressed or implied, and hereby disclaim
-                and negate all other warranties including, without limitation,
-                implied warranties or conditions of merchantability, fitness for
-                a particular purpose, or non-infringement of intellectual
-                property or other violation of rights.
+                The materials on our website are provided on an &apos;as
+                is&apos; basis. We make no warranties, expressed or implied, and
+                hereby disclaim and negate all other warranties including,
+                without limitation, implied warranties or conditions of
+                merchantability, fitness for a particular purpose, or
+                non-infringement of intellectual property or other violation of
+                rights.
               </p>
             </section>
 
@@ -240,9 +244,9 @@ export default function TermsPage() {
                 contractors, agents, officers and directors, from and against
                 any and all claims, damages, obligations, losses, liabilities,
                 costs or debt, and expenses (including but not limited to
-                attorney's fees), resulting from or arising out of your use and
-                access of the website, by you or any person using your account
-                and password, or a breach of these Terms.
+                attorney&apos;s fees), resulting from or arising out of your use
+                and access of the website, by you or any person using your
+                account and password, or a breach of these Terms.
               </p>
             </section>
 

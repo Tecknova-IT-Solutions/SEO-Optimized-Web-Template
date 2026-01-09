@@ -6,6 +6,9 @@ import { formatDate } from '@/lib/utils';
 import { getBaseUrl } from '@/lib/utils';
 import type { Metadata } from 'next';
 
+// Force dynamic rendering to ensure proper SSR in production
+export const dynamic = 'force-dynamic';
+
 // Example blog post data - in a real app, this would come from a CMS or database
 const blogPosts: Record<
   string,
@@ -132,7 +135,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         ]}
         className="container py-4"
       />
-      <article className="container mx-auto py-16 px-10">
+      <article className="container mx-auto px-10 py-16">
         <div className="mx-auto max-w-3xl space-y-8">
           <header className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tight">{post.title}</h1>

@@ -4,7 +4,6 @@ import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { OrganizationSchema } from '@/components/seo/JsonLd';
-import { getBaseUrl } from '@/lib/utils';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 

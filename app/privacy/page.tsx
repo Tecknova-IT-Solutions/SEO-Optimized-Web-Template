@@ -2,6 +2,9 @@ import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { createMetadata } from '@/components/seo/MetaTags';
 import type { Metadata } from 'next';
 
+// Force dynamic rendering to ensure proper SSR in production
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = createMetadata({
   title: 'Privacy Policy',
   description:
@@ -230,7 +233,9 @@ export default function PrivacyPage() {
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-semibold">8. Children's Privacy</h2>
+              <h2 className="text-2xl font-semibold">
+                8. Children&apos;s Privacy
+              </h2>
               <p className="text-muted-foreground">
                 Our services are not intended for children under the age of 13.
                 We do not knowingly collect personal information from children
@@ -249,7 +254,7 @@ export default function PrivacyPage() {
                 reflect changes to our practices or for other operational,
                 legal, or regulatory reasons. We will notify you of any changes
                 by posting the new Privacy Policy on this page and updating the
-                "Last updated" date.
+                &quot;Last updated&quot; date.
               </p>
             </section>
 
@@ -260,7 +265,13 @@ export default function PrivacyPage() {
                 please contact us at:
               </p>
               <p className="text-muted-foreground">
-                Email: privacy@example.com
+                Email:{' '}
+                <a
+                  href="mailto:privacy@example.com"
+                  className="text-primary hover:underline"
+                >
+                  privacy@example.com
+                </a>
                 <br />
                 Address: 123 Example Street, City, State, ZIP Code
               </p>
